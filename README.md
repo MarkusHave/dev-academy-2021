@@ -2,6 +2,8 @@
 
 Name app made with TypeScript and [Nest.js](https://nestjs.com/).
 
+Containerized using Docker.
+
 Documentation:
 
 ```
