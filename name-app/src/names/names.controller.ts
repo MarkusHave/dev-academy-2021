@@ -17,7 +17,7 @@ export class NamesController {
   }
 
   @Get('count')
-  nameCount(): number {
-    return this.namesService.nameCount();
+  totalNameCount(): number {
+    return this.namesService.totalNameCount();
   }
 }

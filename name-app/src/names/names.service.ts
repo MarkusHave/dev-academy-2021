@@ -16,7 +16,9 @@ export class NamesService {
   }
 
   // Returns total amount of names
-  nameCount(): number {
+  totalNameCount(): number {
     return names.reduce((acc, name) => acc + name.amount, 0);
   }
+
+  // Return the amount of the name given as a parameter
 }
