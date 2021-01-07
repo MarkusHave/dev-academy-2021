@@ -21,4 +21,9 @@ export class NamesService {
   }
 
   // Return the amount of the name given as a parameter
+  nameCount(name: string): number {
+    // Capitalize first letter before trying to find it
+    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+    return names.find((item) => item.name == capitalizedName).amount;
+  }
 }
