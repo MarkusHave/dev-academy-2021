@@ -15,4 +15,9 @@ export class NamesController {
   findAllByName(): Array<string> {
     return this.namesService.findAllByName();
   }
+
+  @Get('count')
+  nameCount(): number {
+    return this.namesService.nameCount();
+  }
 }
