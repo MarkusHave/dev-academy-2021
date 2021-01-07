@@ -5,7 +5,7 @@ import { names } from '../names.json';
 @Injectable()
 export class NamesService {
   // Returns all names and amounts, ordered by amount, most popular first
-  getAllByAmount(): Array<NamesDTO> {
+  findAllByAmount(): Array<NamesDTO> {
     return names.sort((a, b) => (a.amount > b.amount ? -1 : 1));
   }
 }
