@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { NamesService } from './names.service';
 import { NamesDTO } from './names.dto';
 
@@ -19,5 +19,10 @@ export class NamesController {
   @Get('count')
   totalNameCount(): number {
     return this.namesService.totalNameCount();
+  }
+
+  @Get(':name')
+  nameCount(@Param('name') name: string): number {
+    return this.namesService.nameCount(name);
   }
 }
