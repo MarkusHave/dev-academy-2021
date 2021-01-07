@@ -10,4 +10,9 @@ export class NamesController {
   findAllByAmount(): Array<NamesDTO> {
     return this.namesService.findAllByAmount();
   }
+
+  @Get('a-z')
+  findAllByName(): Array<string> {
+    return this.namesService.findAllByName();
+  }
 }
