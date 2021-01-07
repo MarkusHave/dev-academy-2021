@@ -20,7 +20,7 @@ export class NamesService {
     return names.reduce((acc, name) => acc + name.amount, 0);
   }
 
-  // Return the amount of the name given as a parameter
+  // Returns the amount of the name given as a parameter
   nameCount(name: string): number {
     // Capitalize first letter before trying to find it
     const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
