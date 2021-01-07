@@ -8,4 +8,10 @@ export class NamesService {
   findAllByAmount(): Array<NamesDTO> {
     return names.sort((a, b) => (a.amount > b.amount ? -1 : 1));
   }
+
+  // Returns all names by alphabetical order
+  findAllByName(): Array<string> {
+    // First include only names and then sort them to alphabetical order
+    return names.map((x) => x.name).sort((a, b) => (a > b ? 1 : -1));
+  }
 }
