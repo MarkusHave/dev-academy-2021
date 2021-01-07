@@ -15,4 +15,4 @@ WORKDIR /home/node
 COPY --from=builder /home/node/package*.json ./
 COPY --from=builder /home/node/dist ./dist
 RUN npm ci
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/main.ts"]
