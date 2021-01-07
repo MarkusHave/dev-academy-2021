@@ -14,4 +14,9 @@ export class NamesService {
     // First include only names and then sort them to alphabetical order
     return names.map((x) => x.name).sort((a, b) => (a > b ? 1 : -1));
   }
+
+  // Returns total amount of names
+  nameCount(): number {
+    return names.reduce((acc, name) => acc + name.amount, 0);
+  }
 }
